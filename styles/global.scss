@@ -1,0 +1,171 @@
+@import "general";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @media screen and (min-width: var(--media-desktop)) {
+    background-size: contain;
+  }
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(13, 93, 185);
+  background-repeat: no-repeat;
+  font-family: "Rubik", sans-serif;
+}
+
+.App {
+  h1 {
+    @media screen and (min-width: var(--media-desktop)) {
+      font-size: 30px;
+    }
+    font-weight: 500;
+    font-size: 25.5px;
+    margin-top: 26px;
+    margin-bottom: 28px;
+    color: white;
+    text-align: center;
+  }
+
+  h6 {
+    @media screen and (min-width: var(--media-desktop)) {
+      font-size: 20px;
+    }
+    font-weight: 300;
+    font-size: 14.5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .form {
+    margin: 0 24px 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: 18.5;
+      input {
+        font-size: 18px;
+        width: 269px;
+        border-radius: 14px 0 0 14px;
+        outline: none;
+        border: none;
+        background-color: white;
+        padding: 18px;
+        @media screen and (min-width: var(--media-desktop)) {
+          width: 497px;
+        }
+      }
+      button {
+        border-radius: 0 14px 14px 0;
+        background-color: black;
+        width: 58px;
+        padding: 16px;
+        color: white;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ip_detail {
+    transform: translate(-50%, 50%);
+    top: 0;
+    left: 50%;
+    width: 327px;
+    height: 325px;
+    z-index: 1;
+    padding-top: 26px;
+    position: absolute;
+    border-radius: 14px;
+    background-color: white;
+    text-align: center;
+    @media screen and (min-width: var(--media-desktop)) {
+      padding-top: 0;
+      text-align: left;
+      transform: translate(-50%, 90%);
+      width: 1110px;
+      height: 161px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .ip_address {
+        margin-left: 18px;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        border-right: 1px solid var(--gray);
+      }
+      .location {
+        margin-left: 18px;
+        border-right: 1px solid var(--gray);
+        width: 100%;
+      }
+      .timezone {
+        margin-left: 18px;
+        border-right: 1px solid var(--gray);
+        width: 100%;
+      }
+      .isp {
+        margin-left: 18px;
+        width: 100%;
+      }
+      .lat_lng {
+        margin-left: 18px;
+        width: 100%;
+      }
+    }
+    p {
+      color: var(--gray);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      @media screen and (min-width: var(--media-desktop)) {
+        margin-bottom: 14px;
+        font-size: 12px;
+      }
+    }
+    h2 {
+      @media screen and (min-width: var(--media-desktop)) {
+        padding-bottom: 0px;
+        font-size: 24px;
+      }
+      font-weight: 500;
+      color: var(--dark-gray);
+      font-size: 19px;
+      padding-bottom: 24px;
+    }
+  }
+  .leaflet-top {
+    display: none;
+  }
+  .leaflet-control-attribution {
+    display: none;
+  }
+
+  .map {
+    @media screen and (min-width: var(--media-desktop)) {
+      margin-top: 102px;
+    }
+    margin-top: 100px;
+    .leaflet-container {
+      z-index: 0;
+      height: 75vh;
+      width: 100%;
+    }
+  }
+}
